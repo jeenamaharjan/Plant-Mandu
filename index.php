@@ -35,7 +35,7 @@
     <div class="icons">
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-user"></a>
+        <a href="login.php" class="fas fa-user"></a>
     </div>
 
 </header>
@@ -320,7 +320,7 @@
         <div class="user">
             <img src="images/pic-2.png" alt="">
             <div class="user-info">
-                <h3>Kabina GC</h3>
+                <h3>Karina Joshi</h3>
                 <span>happy customer</span>
             </div>
         </div>
