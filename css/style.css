@@ -46,6 +46,7 @@ section{
     padding:.9rem 3.5rem;
     cursor: pointer;
     font-size: 1.7rem;
+    text-align: center;
 }
 
 .btn:hover{
@@ -473,6 +474,24 @@ header .fa-bars{
     color:#444;
 }
 
+.line-separator {
+    background-color: #ccc;
+    flex-grow: 5;
+    height: 1px
+}
+
+.or-label {
+    flex-grow: 1;
+    margin: 0 15px;
+    text-align: center
+}
+
+.or-container {
+    align-items: center;
+    color: #ccc;
+    display: flex;
+    margin: 25px 0
+}
 
 
 
