@@ -70,8 +70,20 @@ if(!$result) die ("Database fetch failed: ".mysqli_error($mysqli));
             <br>
             <input type="submit" value="Login" class="btn" id="submit" name="submit">
             <br><br>
-            <a href="">Forgot Password?</a>            
+            <a href="">Forgot Password?</a>  
+            
+            <div class="or-container">
+                <div class="line-separator"></div>
+                <div class="or-label">or</div>
+                <div class="line-separator"></div>
+            </div>
+            <p>New User?</p>
+            <div class="row">
+            <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="signup.php"> Register</a> </div>
+            </div> <br>
+            
         </form>
+        
     </div>
 
 </section>
