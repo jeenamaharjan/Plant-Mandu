@@ -1,3 +1,10 @@
+<?php 
+//including database connection file
+include_once("config.php");
+$result = mysqli_query($mysqli, "SELECT * FROM customers ORDER BY id ASC"); //using mysql query instead
+if(!$result) die ("Database fetch failed: ".mysqli_error($mysqli));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +20,7 @@
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Validate jss file -->
+    <script src="validateSignUp.js"></script>
     
 </head>
 <body>
@@ -53,13 +61,16 @@
     
     <div class="row">
 
-        <form action="">
-            <input type="text" placeholder="First Name" class="box">
-            <input type="text" placeholder="Last Name" class="box">
-            <input type="email" placeholder="Email" class="box">
-            <input type="password" placeholder="Password" class="box">
+        <form action="add.php" method="post" onsubmit="return validateSignUp(this)">
+            <input type="text" placeholder="Name" class="box" name="name" id="name">
+            <input type="text" placeholder="Address" class="box" name="address" id="address">
+            <input type="tel" placeholder="Phone Number" class="box" name="phone" id="phone">
+            <input type="email" placeholder="Email" class="box" name="email" id="email">
+            <input type="text" placeholder="Age" class="box" name="age" id="age">
+            <input type="text" placeholder="Gender" class="box" name="gernder" id="gender">
+            <input type="password" placeholder="Password" class="box" name="password" id="password">
             
-            <input type="submit" value="SignUp" class="btn">
+            <input type="submit" value="SignUp" class="btn" id="submit" name="submit">
 
             <div class="or-container">
                 <div class="line-separator"></div>
@@ -68,7 +79,7 @@
             </div>
             <div class="row">
             <div class="col-md-12"> <a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="#"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a> </div>
-            </div> <br>
+            </div> <br> <br>
             <p class="text-inverse text-center">Already have an account? <a href="login.php" data-abc="true">Login</a></p>
     
         </form>
