@@ -67,10 +67,10 @@ if(!$result) die ("Database fetch failed: ".mysqli_error($mysqli));
             <input type="tel" placeholder="Phone Number" class="box" name="phone" id="phone">
             <input type="email" placeholder="Email" class="box" name="email" id="email">
             <input type="text" placeholder="Age" class="box" name="age" id="age">
-            <input type="text" placeholder="Gender" class="box" name="gernder" id="gender">
+            <input type="text" placeholder="Gender" class="box" name="gender" id="gender">
             <input type="password" placeholder="Password" class="box" name="password" id="password">
             
-            <input type="submit" value="SignUp" class="btn" id="submit" name="submit">
+            <input type="submit" value="SignUp" class="btn" id="submit" name="Submit">
 
             <div class="or-container">
                 <div class="line-separator"></div>
