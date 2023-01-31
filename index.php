@@ -37,6 +37,8 @@
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="login.php" class="fas fa-user"></a>
+        <?php if (isset($_SESSION['name'])):   ?>
+        <a href="logout.php" class="fas fa-sign-out-alt"></a><?php endif; ?>
         
         
     </div>
