@@ -1,5 +1,6 @@
 <?php 
 include_once("config.php");
+session_start();
 
 /* Get data from Client side using $_POST array */
 if (isset($_POST["submit"])) {
@@ -22,14 +23,26 @@ if ($count>0){
     $pass = $row['Password'];
 
     if ($pass == $Password){
-        echo  "User Verified. <br>Welcome ".$name;
+        $_SESSION['msg'] = "User Verified";
+        //echo  "User Verified. <br>Welcome ".$name;
+        $_SESSION['name'] = $row['Name'];
+        $_SESSION['id'] = $row['id'];
+        //header("Location: login.php");
+        //header( "refresh:5;url=index.php" );
+        header("Location:index.php");
+
+        exit();
     }
     else{
-        echo "Password Incorrect. Try Again.";
+        $_SESSION['msg'] = "Password Incorrect. Try Again.";
+        header("Location: login.php");
+        exit();
     }
 }
 else{
-    echo "No such email found!";
+    $_SESSION['msg'] = "No such email found!";
+    header("Location: login.php");
+    exit();
 }
 // $name = $row['Name'];
 // $email = $row['Email'];

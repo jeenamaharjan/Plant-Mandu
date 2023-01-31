@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,6 +37,16 @@
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="login.php" class="fas fa-user"></a>
+        <p>
+            <?php 
+                if (isset($_SESSION['name']))
+                {
+                    echo $_SESSION['name'];
+                }
+                ?>
+        
+            </p>
+        
     </div>
 
 </header>
