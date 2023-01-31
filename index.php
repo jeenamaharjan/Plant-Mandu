@@ -37,15 +37,7 @@
         <a href="#" class="fas fa-heart"></a>
         <a href="#" class="fas fa-shopping-cart"></a>
         <a href="login.php" class="fas fa-user"></a>
-        <p>
-            <?php 
-                if (isset($_SESSION['name']))
-                {
-                    echo $_SESSION['name'];
-                }
-                ?>
         
-            </p>
         
     </div>
 
@@ -58,6 +50,15 @@
 <section class="home" id="home">
 
     <div class="content">
+        <h1 class="welcome-back">
+            <?php 
+                if (isset($_SESSION['name']))
+                {
+                    echo "Welcome back " . $_SESSION['name'];
+                }
+                ?>
+        
+        </h1>    
         <span> Upto 50% off </span>
         <h3>Plant Make<br>People Happy</h3>
         <a href="#" class="btn">shop now</a>

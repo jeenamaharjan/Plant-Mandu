@@ -493,6 +493,14 @@ header .fa-bars{
     margin: 25px 0
 }
 
+.welcome-back{
+    color: #b5635b;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    display: block;
+    font-size: 2.5rem;
+}
+
 
 
 
