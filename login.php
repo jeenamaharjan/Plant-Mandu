@@ -71,7 +71,16 @@ session_start();
             <br>
             <input type="submit" value="Login" class="btn" id="submit" name="submit">
             <br><br>
-            <a href="">Forgot Password?</a>  
+            <a href="">Forgot Password?</a>
+            <p style="color: red; font-size: medium;">
+                <?php
+                    if (isset($_SESSION['msg']))
+                    {
+                        echo $_SESSION['msg'];
+                        unset($_SESSION['msg']);
+                    }
+                ?>
+            </p>
             
             <div class="or-container">
                 <div class="line-separator"></div>
