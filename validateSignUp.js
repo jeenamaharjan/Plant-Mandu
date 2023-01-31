@@ -20,7 +20,8 @@ function validatePassword(field){
 }
 
 function validateAge(field){
-    if (isNaN(field)||field<1||field>100)
+    if (field =="") return "No age was entered.\n"
+    else if (isNaN(field)||field<1||field>100)
     { 
         alert("The age must be a number between 1 and 100");
         return false;
@@ -31,15 +32,15 @@ function validateAge(field){
   
 function validatePhone(field)
 {
-  var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
-  if(field.value.match(phoneno))
-        {
-      return "";
-        }
-      else
-        {
-        alert("Enter valid phone number");
-       
-        }
+    var phoneno = /^\+?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+    if (field =="") return "No phone number was entered.\n"
+    else if(field.value.match(phoneno)){
+        return "";
+    }
+    else
+    {
+    alert("Enter valid phone number");
+    
+    }
 }
 
