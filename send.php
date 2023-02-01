@@ -9,21 +9,24 @@ $db = "form";
 
 $con = new mysqli($host,$user,$pass,$db);
 if(!$con) {
-    echo "there are some problem";
+    echo "There are some problems accessing database";
 
 }
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$msg = $_POST['msg'];
+if (isset($_POST["submit"])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $msg = $_POST['msg'];
+}
+
 
 $qry = "INSERT INTO `table1`(`name`, `email`, `phone`, `msg`)VALUES ('$name', '$email', $phone, '$msg')";
 $insert = mysqli_query($con,$qry);
 if(!insert){
-    echo "there are some problems while inserting data";
+    echo "There are some problems while inserting data";
 }
 else{
-echo "data Inserted";
+echo "Data Inserted";
 
 }
