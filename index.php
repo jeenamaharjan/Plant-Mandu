@@ -1,3 +1,15 @@
+<?php
+$host = "localhost";
+$user ="root";
+$pass = "";
+$db = "form";
+
+$con = new mysqli($host,$user,$pass,$db);
+if(!$con) {
+    echo "There are some problems!";
+} ?>
+
+
 <?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -374,12 +386,12 @@
 
     <div class="row">
 
-        <form action="">
-            <input type="text" placeholder="Name" class="box">
-            <input type="email" placeholder="Email" class="box">
-            <input type="number" placeholder="Phone No" class="box">
-            <textarea name="" class="box" placeholder="Message" id="" cols="30" rows="10"></textarea>
-            <input type="submit" value="Submit" class="btn">
+        <form action="send.php" method="post">
+            <input type="text" placeholder="Name" class="box" name="name">
+            <input type="email" placeholder="Email" class="box" name="email">
+            <input type="number" placeholder="Phone No" class="box" name="phone">
+            <textarea name="" class="box" placeholder="Message" id="" cols="30" rows="10" name="msg"></textarea>
+            <input type="submit" value="Submit" class="btn" name="submit">
         </form>
 
         <div class="image">
