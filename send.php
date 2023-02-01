@@ -1,5 +1,5 @@
 <?php
-include_once("send.php");
+//include_once("send.php");
 $result = mysqli_query($mysqli,"SELECT *FROM `table1` WHERE 1");
 if(!$result) die ("Database fetch failed: ".mysqli_error($mysqli));
 $host = "localhost";
@@ -12,12 +12,12 @@ if(!$con) {
     echo "there are some problem";
 
 }
-
+if(isset($_POST["submit"])){
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone = $_POST['phone'];
 $msg = $_POST['msg'];
-
+}
 $qry = "INSERT INTO `table1`(`name`, `email`, `phone`, `msg`)VALUES ('$name', '$email', $phone, '$msg')";
 $insert = mysqli_query($con,$qry);
 if(!insert){
