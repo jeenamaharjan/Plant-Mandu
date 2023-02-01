@@ -1,5 +1,4 @@
 <?php
-include_once("send.php");
 $result = mysqli_query($mysqli,"SELECT *FROM `table1` WHERE 1");
 if(!$result) die ("Database fetch failed: ".mysqli_error($mysqli));
 $host = "localhost";
@@ -27,6 +26,8 @@ if(!insert){
     echo "There are some problems while inserting data";
 }
 else{
-echo "Data Inserted";
+     //display success message
+     echo "<font color = 'green'>Data saved successfully.</font>";
+     header("Location:index.php");
 
 }
